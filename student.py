@@ -79,20 +79,40 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
     def dab(self):
+        #high power left
+
+        #servo right
         pass
 
     def floss(self):
+        #high power left
+
+        #return to middle
+
+        #high power right
         pass
 
     def whip(self):
+        #medium power right
+
+        #high power left
         pass
 
     def sprinkler(self):
+        #high power left
+        
+        # #stop for .1 seconds
+
+        #repeat
         pass
 
     def spin(self):
-        pass
+        #right wheel high power
 
+        #left wheel high power
+
+
+        pass
 
 
 
