@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
         self.left()
         time.sleep(1)
         #servo right
-        servo.right()
+        self.servo(1000)
         time.sleep(1)
         self.midpoint
         self.stop()
