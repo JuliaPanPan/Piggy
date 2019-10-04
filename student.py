@@ -80,9 +80,14 @@ class Piggy(PiggyParent):
 
     def dab(self):
         #high power left
-
+        self.left()
+        time.sleep(1)
         #servo right
-        pass
+        servo.right()
+        time.sleep(1)
+        self.midpoint
+        self.stop()
+    
 
     def floss(self):
         #high power left
