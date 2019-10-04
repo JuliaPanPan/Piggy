@@ -57,10 +57,10 @@ class Piggy(PiggyParent):
         #highered - ordered
         for x in range(3):
             self.dab()
-            self.floss()
-            self.whip()
-            self.sprinkler()
-            self.spin()
+            #self.floss()
+            #self.whip()
+            #self.sprinkler()
+            #self.spin()
         
 
     def scan(self):
@@ -80,6 +80,7 @@ class Piggy(PiggyParent):
 
     def dab(self):
         #high power left
+        '''
         self.left()
         time.sleep(1)
         #servo right
@@ -87,6 +88,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.midpoint
         self.stop()
+        '''
     
 
     def floss(self):
