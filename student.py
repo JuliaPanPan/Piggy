@@ -81,7 +81,7 @@ class Piggy(PiggyParent):
     def dab(self):
         #high power left
         self.servo(1000)
-        self.turn_by_deg(90)
+        self.turn_by_deg(45)
         #servo right
         
         time.sleep(1)
