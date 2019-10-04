@@ -80,7 +80,6 @@ class Piggy(PiggyParent):
 
     def dab(self):
         #high power left
-        '''
         self.left()
         time.sleep(1)
         #servo right
@@ -88,7 +87,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.midpoint
         self.stop()
-        '''
+        
     
 
     def floss(self):
