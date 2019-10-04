@@ -100,7 +100,7 @@ class PiggyParent(gopigo3.GoPiGo3):
 
         #while loop - keep turning until my gyro says I'm there
         while abs(deg - self.get_heading()) > 5:
-            self.right(primary=60, counter=-60)
+        self.right(primary=60, counter=-60)
         self.stop()
         print("I think I've turned correctly")
         pass
