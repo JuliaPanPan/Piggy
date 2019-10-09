@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
         self.turn_by_deg(45)
         #servo right
         self.servo(1000)
-        self.midpoint
+        self.midpoint()
         self.stop()
         
     
@@ -102,6 +102,7 @@ class Piggy(PiggyParent):
 
         #high power left
         self.turn_by_deg(100)
+        self.stop()
 
     def sprinkler(self):
         #high power left
