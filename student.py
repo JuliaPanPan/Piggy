@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
         for x in range(3):
             self.dab()
             #self.floss()
-            #self.whip()
+            self.whip()
             #self.sprinkler()
             #self.spin()
         
@@ -99,9 +99,10 @@ class Piggy(PiggyParent):
 
     def whip(self):
         #medium power right
+        self.turn_by_deg(30)
 
         #high power left
-        pass
+        self.turn_by_deg(100)
 
     def sprinkler(self):
         #high power left
