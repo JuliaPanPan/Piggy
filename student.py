@@ -82,9 +82,7 @@ class Piggy(PiggyParent):
         #high power left
         self.turn_by_deg(45)
         #servo right
-        self.servo(1000)
-        
-        self.midpoint()
+        self.servo(1000)   
         self.stop()
         
     
