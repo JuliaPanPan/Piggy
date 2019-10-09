@@ -56,10 +56,10 @@ class Piggy(PiggyParent):
     def dance(self):
         #highered - ordered
         for x in range(3):
-            self.dab()
+            #self.dab()
             #self.floss()
-            self.whip()
-            #self.sprinkler()
+            #self.whip()
+            self.sprinkler()
             #self.spin()
         
 
@@ -105,6 +105,11 @@ class Piggy(PiggyParent):
         self.stop()
 
     def sprinkler(self):
+        turn_by_deg(359)
+        self.servo(2000)
+        self.servo(1000)
+        self.servo(2000)
+        self.stop()
         #high power left
         
         # #stop for .1 seconds
