@@ -105,10 +105,10 @@ class Piggy(PiggyParent):
         self.stop()
 
     def sprinkler(self):
-        self.turn_by_deg(90)
+        for x in range(4):
+            self.turn_by_deg(90)
         self.servo(2000)
-        self.servo(1000)
-        self.servo(2000)
+        self.servo(1500)
         self.stop()
         #high power left
         
