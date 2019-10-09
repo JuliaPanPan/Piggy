@@ -83,6 +83,7 @@ class Piggy(PiggyParent):
         self.turn_by_deg(45)
         #servo right
         self.servo(1000)   
+        self.sleep(2)
         self.stop()
         
     
