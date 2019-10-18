@@ -57,11 +57,11 @@ class Piggy(PiggyParent):
     def dance(self):
         #highered - ordered
         for x in range(3):
-            #self.dab()
+            self.dab()
             self.floss()
-            #self.whip()
-            #self.sprinkler()
-            #self.spin()
+            self.whip()
+            self.sprinkler()
+            self.spin()
         
 
     def scan(self):
@@ -85,6 +85,7 @@ class Piggy(PiggyParent):
         #servo right
         self.servo(1000)   
         time.sleep(2)
+        #return to original position
         self.turn_by_deg(-45)
         self.servo(1500)
         self.stop()
@@ -93,16 +94,19 @@ class Piggy(PiggyParent):
 
     def floss(self):
         for x in range(2):
+            #floss right
             self.turn_by_deg(45)
             self.fwd()
             time.sleep(1)
             self.back()
             time.sleep(1)
+            #floss left
             self.turn_by_deg(-90)
             self.fwd()
             time.sleep(1)
             self.back()
             time.sleep(1)
+            #floss right again
             self.turn_by_deg(90)
             self.fwd()
             time.sleep(1)
@@ -112,23 +116,27 @@ class Piggy(PiggyParent):
 
 
     def whip(self):
-        #medium power right
+        #turn slightly right
         self.turn_by_deg(30)
         time.sleep(1)
-        #high power left
+        #turn left hard
         self.turn_by_deg(100)
         time.sleep(2)
         self.stop()
 
     def sprinkler(self):
+        #servo look right
         self.servo(1000)
+        #robot turn right 5 times in short increments
         for x in range(5):
             self.turn_by_deg(-20)
             time.sleep(.5)
         self.stop()
 
     def spin(self):
+        #spin in a circle right
         self.turn_by_deg(359)
+        #spin in a circle left
         self.turn_by_deg(-359)
         self.stop()
 
