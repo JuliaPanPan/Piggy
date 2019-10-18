@@ -98,15 +98,19 @@ class Piggy(PiggyParent):
             #floss right
             #turn right
             self.turn_by_deg(45)
-            #go forward
+            #go forward for 1 second
             self.fwd()
             time.sleep(1)
+            #go backwards for 1 second
             self.back()
             time.sleep(1)
             #floss left
+            #turn left
             self.turn_by_deg(-90)
+            #go forward for 1 second
             self.fwd()
             time.sleep(1)
+            #go backwards for 1 second
             self.back()
             time.sleep(1)
             #floss right again
