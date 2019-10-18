@@ -58,10 +58,10 @@ class Piggy(PiggyParent):
         #highered - ordered
         for x in range(3):
             self.dab()
-            self.floss()
-            self.whip()
-            self.sprinkler()
-            self.spin()
+            #self.floss()
+            #self.whip()
+            #self.sprinkler()
+            #self.spin()
         
 
     def scan(self):
