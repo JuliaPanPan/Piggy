@@ -106,7 +106,17 @@ class PiggyParent(gopigo3.GoPiGo3):
         turn = self.right  # connect it to the method without the () to activate
         if (current - goal > 0 and current - goal < 180) or \
             (current - goal < 0 and (360 - goal) + current < 180):
-            turn = self.left
+            turn = self.left 
+
+        # while loop - keep turning until my gyro says I'm there
+        while abs(deg - self.get_heading()) > 3:
+            turn(primary=70, counter=-70)
+            time.sleep(.05) # avoid spamming the gyro
+            
+        # once out of the loop, hit the brakes
+        self.stop()
+        # report out to the user
+        print("\n{} is close enough to {}.\n".format(self.get_heading(), deg))
 
 
     def fwd(self, left=50, right=50):
