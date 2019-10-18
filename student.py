@@ -88,6 +88,7 @@ class Piggy(PiggyParent):
         #return to original position
         self.turn_by_deg(-45)
         self.servo(1500)
+        #stop
         self.stop()
         
     
@@ -95,7 +96,9 @@ class Piggy(PiggyParent):
     def floss(self):
         for x in range(2):
             #floss right
+            #turn right
             self.turn_by_deg(45)
+            #go forward
             self.fwd()
             time.sleep(1)
             self.back()
@@ -112,6 +115,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.back()
             time.sleep(1)
+            #stop
         self.stop()
 
 
