@@ -94,6 +94,7 @@ class Piggy(PiggyParent):
     
 
     def floss(self):
+        #repeat 2 times
         for x in range(2):
             #floss right
             #turn right
@@ -114,9 +115,12 @@ class Piggy(PiggyParent):
             self.back()
             time.sleep(1)
             #floss right again
+            #turn right
             self.turn_by_deg(90)
+            #go forward
             self.fwd()
             time.sleep(1)
+            #go backwards
             self.back()
             time.sleep(1)
             #stop
@@ -130,6 +134,7 @@ class Piggy(PiggyParent):
         #turn left hard
         self.turn_by_deg(100)
         time.sleep(2)
+        #stop
         self.stop()
 
     def sprinkler(self):
@@ -139,6 +144,7 @@ class Piggy(PiggyParent):
         for x in range(5):
             self.turn_by_deg(-20)
             time.sleep(.5)
+            #stop
         self.stop()
 
     def spin(self):
@@ -146,6 +152,7 @@ class Piggy(PiggyParent):
         self.turn_by_deg(359)
         #spin in a circle left
         self.turn_by_deg(-359)
+        #stop
         self.stop()
 
 
