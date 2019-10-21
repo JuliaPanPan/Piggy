@@ -139,12 +139,19 @@ class Piggy(PiggyParent):
 
     def sprinkler(self):
         #servo look right
-        self.servo(2000)
+        self.servo(1000)
         #robot turn right 5 times in short increments
-        for x in range(5):
-            self.turn_by_deg(20)
-            time.sleep(.5)
-            #stop
+        self.turn_by_deg(-20)
+        time.sleep(.5)
+        self.turn_by_deg(-20)
+        time.sleep(.5)
+        self.turn_by_deg(-20)
+        time.sleep(.5)
+        self.turn_by_deg(-20)
+        time.sleep(.5)
+        self.turn_by_deg(-20)
+        time.sleep(.5)
+        #stop
         self.stop()
 
     def spin(self):
