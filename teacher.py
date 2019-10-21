@@ -11,8 +11,11 @@ class PiggyParent(gopigo3.GoPiGo3):
     def __init__(self, addr=8, detect=True):
         gopigo3.GoPiGo3.__init__(self)
         self.scan_data = {}
-        self.distance_sensor = EasyDistanceSensor()
-        self.imu = inertial_measurement_unit.InertialMeasurementUnit(bus = "GPG3_AD1")
+        # mutex sensors on IC2
+        self.distance_sensor = EasyDistanceSensor(port="RPI_1", use_mutex=True)
+        self.imu = inertial_measurement_unit.InertialMeasurementUnit(bus="RPI_1", use_mutex=True)
+        # buffer for reading the gyro
+        self.gyro_buffer = 0
         self.stop()
 
     def calibrate(self):
@@ -165,7 +168,12 @@ class PiggyParent(gopigo3.GoPiGo3):
         return d
 
     def get_heading(self):
-        """Returns the heading from the IMU sensor"""
-        reading = self.imu.read_euler()[0]
-        print("Gyroscope sensor is at: {} degrees ".format(reading))
-        return reading
+        """Returns the heading from the IMU sensor, or if there's a sensor exception, it returns
+        the last saved reading"""
+        try:
+            self.gyro_buffer = self.imu.read_euler()[0]
+            print("Gyroscope sensor is at: {} degrees ".format(self.gyro_buffer))
+        except Exception as e:
+            print("----- PREVENTED GYRO SENSOR CRASH -----")
+            print(e)
+        return self.gyro_buffer
