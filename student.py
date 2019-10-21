@@ -57,11 +57,11 @@ class Piggy(PiggyParent):
     def dance(self):
         #highered - ordered
         for x in range(3):
-            self.dab()
+            #self.dab()
             self.floss()
-            self.whip()
-            self.sprinkler()
-            self.spin()
+            #self.whip()
+            #self.sprinkler()
+            #self.spin()
         
 
     def scan(self):
