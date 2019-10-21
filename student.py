@@ -94,36 +94,34 @@ class Piggy(PiggyParent):
     
 
     def floss(self):
-        #repeat 2 times
-        for x in range(2):
-            #floss right
-            #turn right
-            self.turn_by_deg(45)
-            #go forward for 1 second
-            self.fwd()
-            time.sleep(1)
-            #go backwards for 1 second
-            self.back()
-            time.sleep(1)
-            #floss left
-            #turn left
-            self.turn_by_deg(-90)
-            #go forward for 1 second
-            self.fwd()
-            time.sleep(1)
-            #go backwards for 1 second
-            self.back()
-            time.sleep(1)
-            #floss right again
-            #turn right
-            self.turn_by_deg(90)
-            #go forward
-            self.fwd()
-            time.sleep(1)
-            #go backwards
-            self.back()
-            time.sleep(1)
-            #stop
+        #floss right
+        #turn right
+        self.turn_by_deg(45)
+        #go forward for 1 second
+        self.fwd()
+        time.sleep(1)
+        #go backwards for 1 second
+        self.back()
+        time.sleep(1)
+        #floss left
+        #turn left
+        self.turn_by_deg(-45)
+        #go forward for 1 second
+        self.fwd()
+        time.sleep(1)
+        #go backwards for 1 second
+        self.back()
+        time.sleep(1)
+        #floss right again
+        #turn right
+        self.turn_by_deg(90)
+        #go forward
+        self.fwd()
+        time.sleep(1)
+        #go backwards
+        self.back()
+        time.sleep(1)
+        #stop
         self.stop()
 
 
