@@ -184,8 +184,8 @@ class Piggy(PiggyParent):
         for x in range(5):
             self.servo(1000)
             self.servo(2000)
-        time.sleep(1)
         self.fwd()
+        time.sleep(1)
         for x in range(3):
             self.turn_by_deg(45)
             self.turn_by_deg(-45)
