@@ -63,11 +63,11 @@ class Piggy(PiggyParent):
         else:
             print("It's safe to dance")
         for x in range(3):
-            #self.dab()
-            #self.floss()
-            #self.whip()
-            #self.sprinkler()
-            #self.spin()
+            self.dab()
+            self.floss()
+            self.whip()
+            self.sprinkler()
+            self.spin()
             self.shake()
 
     def safe_to_dance(self):
