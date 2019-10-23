@@ -171,8 +171,10 @@ class Piggy(PiggyParent):
     def spin(self):
         #spin in a circle right
         self.turn_by_deg(350)
+        time.sleep(.5)
         #spin in a circle left
         self.turn_by_deg(-350)
+        time.sleep(.5)
         #stop
         self.stop()
 
