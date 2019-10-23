@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
             return #return closes down the method
         else:
             print("It's safe to dance")
-        for x in range(3):
+        for x in range(2):
             self.dab()
             self.floss()
             self.whip()
@@ -181,16 +181,23 @@ class Piggy(PiggyParent):
         self.stop()
 
     def shake(self):
+        #servo shake head
         for x in range(5):
             self.servo(1000)
+            time.sleep(.25)
             self.servo(2000)
+            time.sleep(.25)
+            #go forward
         self.fwd()
+        #robot shake
         time.sleep(1)
         for x in range(3):
             self.turn_by_deg(45)
             self.turn_by_deg(-45)
+        #go backward
         self.back()
         time.sleep(1)
+        #robot shake
         for x in range(3):
             self.turn_by_deg(45)
             self.turn_by_deg(-45)
