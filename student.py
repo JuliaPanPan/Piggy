@@ -56,13 +56,29 @@ class Piggy(PiggyParent):
 
     def dance(self):
         #highered - ordered
+        # check ot see it's safe
+        if not self.safe_to_dance():
+            print("Not cool. Not going to dance")
+            return #return closes down the method
+        else:
+            print("It's safe to dance")
         for x in range(3):
             self.dab()
             self.floss()
             self.whip()
             self.sprinkler()
             self.spin()
-        
+
+    def safe_to_dance(self):
+        """does a 360 distance check and returns true if safe"""
+        for x in range(4):
+            for ang in range(1000, 2001, 100):
+                self.servo(ang)
+                time.sleep(.1)
+                if self.read_distance() < 250:
+                    return False
+            self.turn_by_deg(90)
+        return True
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
