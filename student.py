@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
             return #return closes down the method
         else:
             print("It's safe to dance")
-        for x in range(2):
+        for x in range(1):
             #self.dab()
             self.floss()
             #self.whip()
