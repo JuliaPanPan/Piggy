@@ -62,13 +62,13 @@ class Piggy(PiggyParent):
             return #return closes down the method
         else:
             print("It's safe to dance")
-        for x in range(2):
+        for x in range(1):
             self.dab()
-            self.floss()
-            self.whip()
-            self.sprinkler()
-            self.spin()
-            self.shake()
+            #self.floss()
+            #self.whip()
+            #self.sprinkler()
+            #self.spin()
+            #self.shake()
 
     def safe_to_dance(self):
         """does a 360 distance check and returns true if safe"""
@@ -96,7 +96,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
-    def dab(self):
+    def dab(self): #turn robot right and servo left, return to original position
         #high power left
         self.turn_by_deg(-45)
         #servo right
@@ -111,7 +111,7 @@ class Piggy(PiggyParent):
         
     
 
-    def floss(self):
+    def floss(self):# turn body at 45 degrees and go forward and backwards, repeat on other side
         #floss right
         #turn right
         self.turn_by_deg(45)
