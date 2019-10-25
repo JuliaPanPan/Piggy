@@ -64,11 +64,11 @@ class Piggy(PiggyParent):
             print("It's safe to dance")
         for x in range(2):
             self.dab()
-            self.floss()
-            self.whip()
-            self.sprinkler()
-            self.spin()
-            self.shake()
+            #self.floss()
+            #self.whip()
+            #self.sprinkler()
+            #self.spin()
+            #self.shake()
 
     def safe_to_dance(self):
         """does a 360 distance check and returns true if safe"""
@@ -98,7 +98,7 @@ class Piggy(PiggyParent):
 
     def dab(self):
         #high power left
-        self.turn_by_deg(315)
+        self.turn_by_deg(-45)
         #servo right
         self.servo(1000)   
         time.sleep(2)
