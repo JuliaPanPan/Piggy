@@ -114,9 +114,7 @@ class Piggy(PiggyParent):
             while self.read_distance() > 250:
                 self.fwd()
                 time.sleep(.01)
-            while True:
-                self.turn_by_deg(30)
-         
+            self.turn_by_deg(45)
 
     def dab(self): #turn robot right and servo left, return to original position
         #high power left
