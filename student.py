@@ -112,6 +112,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
         while True:
+            self.servo(self.MIDPOINT)
             while self.read_distance() > 250:
                 self.fwd()
                 time.sleep(.01)
