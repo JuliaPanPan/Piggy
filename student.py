@@ -129,7 +129,7 @@ class Piggy(PiggyParent):
                 self.turn_by_deg(180)
                 time.sleep(2)
                 self.fwd(2)
-                self.turn_by_deg(self.get_heading())
+                self.turn_to_deg(self.get_heading())
 
             left_total = 0
             left_count = 0
