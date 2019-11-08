@@ -111,9 +111,8 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
-        
+               
         corner_count = 0
-        started_ at = self.get_heading()
         while True:
             self.servo(self.MIDPOINT) #return servo to the center 
             while self.read_distance() > 250:
