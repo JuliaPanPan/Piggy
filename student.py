@@ -112,14 +112,20 @@ class Piggy(PiggyParent):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
+        corner_count = 0
+        started_ at = self.get_heading()
         while True:
             self.servo(self.MIDPOINT) #return servo to the center 
             while self.read_distance() > 250:
+                corner_count = 0
                 self.fwd()
                 time.sleep(.01)
             self.stop()
             self.scan() #go to scan method and check surroundings
             #traversal
+            corner_count += 1
+            if corner_count > 5:
+                self.turn_by_deg(180)
             left_total = 0
             left_count = 0
             right_total = 0
@@ -137,6 +143,7 @@ class Piggy(PiggyParent):
                 self.turn_by_deg(-45)
             else:
                 self.turn_by_deg(45)
+            
 
     def dab(self): #turn robot right and servo left, return to original position
         #high power left
