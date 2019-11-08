@@ -123,7 +123,7 @@ class Piggy(PiggyParent):
             self.scan() #go to scan method and check surroundings
             #traversal
             corner_count += 1
-            if corner_count > 5:
+            if corner_count > 3:
                 self.turn_by_deg(180)
             left_total = 0
             left_count = 0
