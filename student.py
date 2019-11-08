@@ -107,17 +107,18 @@ class Piggy(PiggyParent):
         return count 
 
     def nav(self):
+        "robot able to navigate by checking surroundings"
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
         while True:
-            self.servo(self.MIDPOINT)
+            self.servo(self.MIDPOINT) #return servo to the center 
             while self.read_distance() > 250:
                 self.fwd()
                 time.sleep(.01)
             self.stop()
-            self.scan()
+            self.scan() #go to scan method and check surroundings
             #traversal
             left_total = 0
             left_count = 0
