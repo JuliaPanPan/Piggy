@@ -116,7 +116,7 @@ class Piggy(PiggyParent):
         
         while True:
             self.servo(self.MIDPOINT) #return servo to the center
-            self.get_heading 
+            self.get_heading() 
             while self.read_distance() > 250:
                 corner_count = 0
                 self.fwd()
@@ -128,7 +128,8 @@ class Piggy(PiggyParent):
             if corner_count > 3:
                 self.turn_by_deg(180)
                 self.fwd(2)
-                self.turn_to_deg(get_heading())
+                self.turn_by_deg(self.get_heading())
+
             left_total = 0
             left_count = 0
             right_total = 0
