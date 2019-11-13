@@ -113,7 +113,6 @@ def quick_check(self):
         self.servo(ang)
         if self.read_distance() < self.SAFE_DIST:
             return False
-    return True
     #if I didn't get to the end, this means I didn't find anything dangerous
     return True
 
