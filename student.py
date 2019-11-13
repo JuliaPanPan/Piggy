@@ -116,7 +116,7 @@ class Piggy(PiggyParent):
         self.get_heading()
         while True:
             self.servo(self.MIDPOINT) #return servo to the center 
-            while self.read_distance() > 250:
+            while self.read_distance() > 300:
                 corner_count = 0
                 self.fwd()
                 time.sleep(.01)
