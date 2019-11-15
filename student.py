@@ -107,14 +107,14 @@ class Piggy(PiggyParent):
         print("I found this many things: %d" % count)
         return count 
 
-def quick_check(self):
-    #three wuick checks
-    for ang in range (self.MIDPOINT-150, self.MIDPOINT+1590, 150):
-        self.servo(ang)
-        if self.read_distance() < self.SAFE_DIST:
-            return False
-    #if I didn't get to the end, this means I didn't find anything dangerous
-    return True
+    def quick_check(self):
+        #three wuick checks
+        for ang in range (self.MIDPOINT-150, self.MIDPOINT+1590, 150):
+            self.servo(ang)
+            if self.read_distance() < self.SAFE_DIST:
+                return False
+        #if I didn't get to the end, this means I didn't find anything dangerous
+        return True
 
     def nav(self):
         "robot able to navigate by checking surroundings"
