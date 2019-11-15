@@ -123,7 +123,6 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
                
         corner_count = 0
-        self.get_heading()
         while True:
             self.servo(self.MIDPOINT) #return servo to the center 
             while self.quick_check():
@@ -136,8 +135,7 @@ class Piggy(PiggyParent):
             corner_count += 1
             if corner_count > 3:
                 self.turn_by_deg(180)
-                time.sleep(2)
-                self.fwd(2)
+                self.fwd(1)
             left_total = 0
             left_count = 0
             right_total = 0
