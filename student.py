@@ -143,10 +143,12 @@ class Piggy(PiggyParent):
                 self.average_turn()
 
     def path_towards_exit(self):
-        # TODO: write down store headings 
-        # TODO: turn toward exit
-        # TODO: check for options
-        # TODO: if no option, turn back toward starting heading
+        where_I_started = self.get_heading() 
+        self.turn_to_deg(self.exit_heading)
+        if self.quick_check():
+            return True
+        else:
+            self.turn_to_deg(where_I_started)
         return False            
     
     def average_turn(self):
