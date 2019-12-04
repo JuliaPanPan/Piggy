@@ -186,7 +186,7 @@ class Piggy(PiggyParent):
         while True:
             time.sleep(.1)
             current_angle = self.get_heading()
-            if abs(angle_started_at - current_angle) > 8:
+            if abs(angle_started_at - current_angle) > 20:
                 self.turn_to_deg(angle_started_at)
 
     def dab(self): #turn robot right and servo left, return to original position
