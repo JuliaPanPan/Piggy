@@ -142,6 +142,7 @@ class Piggy(PiggyParent):
                 self.escape()
             if not self.path_towards_exit():                
                 self.average_turn()
+                # if path towards exit is getting stuck then towards to exit for a few rotations then continue
 
     def path_towards_exit(self):
         where_I_started = self.get_heading() 
