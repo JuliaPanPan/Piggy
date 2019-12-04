@@ -39,6 +39,7 @@ class Piggy(PiggyParent):
         menu = {"n": ("Navigate", self.nav),
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
+                "h": ("Hold Position", self.hold_position),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit)
                 }
@@ -179,6 +180,14 @@ class Piggy(PiggyParent):
         self.turn_by_deg(180)
         self.deg_fwd(720)  
         self.turn_to_deg(self.exit_heading)
+
+    def hold_position(self):
+        angle_started_at = self.get_heading()
+        while True:
+            time.sleep(.1)
+            current_angle = self.get_heading()
+        if current_angle != angle_started_at:
+            self.turn_to_deg(angle_started_at)
 
     def dab(self): #turn robot right and servo left, return to original position
         #high power left
