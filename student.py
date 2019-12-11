@@ -137,8 +137,9 @@ class Piggy(PiggyParent):
                 time.sleep(.01)
             self.stop()
             self.scan()
+            corner_count = 0
             corner_count += 1
-            if corner_count == 3:
+            if corner_count > 3:
                 self.escape()
             if not self.path_towards_exit():                
                 self.average_turn()
@@ -155,10 +156,6 @@ class Piggy(PiggyParent):
     
     def average_turn(self):
         '''robot decides where an obstacle is and turns left or right from that '''
-        corner_count = 0
-        corner_count += 1
-        if corner_count == 3:
-            self.escape()
         left_total = 0
         left_count = 0
         right_total = 0
