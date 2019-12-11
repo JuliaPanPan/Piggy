@@ -179,7 +179,7 @@ class Piggy(PiggyParent):
     
     def escape(self):
         self.turn_by_deg(180)
-        self.deg_fwd(720)  
+        self.deg_fwd(1080)  
         self.turn_to_deg(self.exit_heading)
 
     def hold_position(self):
