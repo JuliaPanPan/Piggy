@@ -138,7 +138,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.scan()
             corner_count += 1
-            if corner_count == 3:
+            if corner_count = 3:
                 self.escape()
             if not self.path_towards_exit():                
                 self.average_turn()
