@@ -128,8 +128,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-------------! EXIT IS AT %d !---------------\n" % self.exit_heading) 
-        count = 0
-
+        
         while True:
             self.servo(self.MIDPOINT) #return servo to the center 
             while self.quick_check():
@@ -141,17 +140,9 @@ class Piggy(PiggyParent):
             corner_count += 1
             if corner_count >= 3:
                 self.escape()
-            if not self.path_towards_exit() and count < 5:                
-                count += 1
+            if not self.path_towards_exit():                
                 self.average_turn()
-            else:
-                self.stuck_in_corner()
 
-
-    def stuck_in_corner(self):
-        self.turn_by_deg(45)
-        self.path_towards_exit()
-    
     def path_towards_exit(self):
         where_I_started = self.get_heading() 
         self.turn_to_deg(self.exit_heading)
