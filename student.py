@@ -150,6 +150,7 @@ class Piggy(PiggyParent):
 
     def stuck_in_corner(self):
         self.turn_by_deg(45)
+        self.fwd()
     
     def path_towards_exit(self):
         where_I_started = self.get_heading() 
