@@ -40,7 +40,7 @@ class Piggy(PiggyParent):
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
                 "h": ("Hold Position", self.hold_position),
-                "v": ("Veer", self.slither)
+                "v": ("Veer", self.slither),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit)
                 }
