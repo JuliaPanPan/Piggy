@@ -119,19 +119,19 @@ class Piggy(PiggyParent):
         self.set_motor_power(self.MOTOR_RIGHT, self. RIGHT_DEFAULT)
         self.fwd()
         #throttle down the left
-        for power in range(self.LEFT_DEFAULT,60, -5):
+        for power in range(self.LEFT_DEFAULT,60, -10):
             self.set_motor_power(self.MOTOR_LEFT, power)
             time.sleep(.5)
         #throttle up the left 
-        for power in range(60, self.LEFT_DEFAULT +1, 5):
+        for power in range(60, self.LEFT_DEFAULT +1, 10):
             self.set_motor_power(self.MOTOR_LEFT, power)
             time.sleep(.1)
         #throttle down the right
-        for power in range(self.RIGHT_DEFAULT,60, -5):
+        for power in range(self.RIGHT_DEFAULT,60, -10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.5)
         #throttle up the right
-        for power in range(60, self.RIGHT_DEFAULT +1, 5):
+        for power in range(60, self.RIGHT_DEFAULT +1, 10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.1)
 
@@ -143,15 +143,13 @@ class Piggy(PiggyParent):
             #if i need to veer right
             if self.get_heading() < starting_direction:
                 print("I'm too far left")
-                right_speed -= 5
-                left_speed += 5
+                self.set_motor_power(self.MOTOR_LEFT, 90)
+                self.set_motor_power(self.MOTOR_RIGHT, 70)
             #if i need to veer left
             elif self.get_heading() > starting_direction:
                 print("I'm too far right")
-                left_speed -= 5
-                right_speed += 5
-            self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
-            self.set_motor_power(self.MOTOR_RIGHT, self. RIGHT_DEFAULT)
+            self.set_motor_power(self.MOTOR_LEFT, 70)
+            self.set_motor_power(self.MOTOR_RIGHT, 90)
             time.sleep(.1)
 
     def quick_check(self):
